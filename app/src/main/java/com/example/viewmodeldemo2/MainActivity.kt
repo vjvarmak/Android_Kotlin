@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        viewModelFactory = MainActivityViewModelFactory(1255)
+        viewModelFactory = MainActivityViewModelFactory(1)
         viewModel = ViewModelProvider(this,viewModelFactory).get(MainActivityViewModel::class.java)
         binding.resultTextView.text = viewModel.getTotal().toString()
 
